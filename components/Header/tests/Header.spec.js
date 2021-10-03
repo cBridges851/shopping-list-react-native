@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+*/
+
 import React from "react";
 import Adapter from "enzyme-adapter-react-16";
 import Enzyme, { ReactWrapper, mount } from "enzyme";
@@ -6,14 +10,14 @@ Enzyme.configure({ adapter: new Adapter() })
 
 describe("Using the Header component", () => {
     let props = {
-        title: "Title With A Head"
+        title: "Title With a Head"
     };
     let wrapper = mount(<Header title={props.title}/>);
     
     describe("given the required props", () => {
         test("then it should render the header", () => {
             let header = wrapper.find("Header");
-            expect(header.text()).toBe("Title With A Head");
+            expect(header.text()).toBe("Title With a Head");
         });
     });
 
@@ -24,7 +28,8 @@ describe("Using the Header component", () => {
                     title: "Title Without a Head"
                 });
 
-                expect(header.text()).toBe("Title Without A Head");
+                let header = wrapper.find("Header");
+                expect(header.text()).toBe("Title Without a Head");
             });
         })
     });
