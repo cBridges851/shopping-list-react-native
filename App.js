@@ -1,6 +1,6 @@
 import React from "react";
 import { Alert, Button, View, Text, Image, StyleSheet, FlatList } from "react-native";
-import Header from "./components/Header/Header";
+import { Header } from "./components/Header/Header";
 import ListItem from "./components/ListItem";
 import AddItem from "./components/AddItem";
 
