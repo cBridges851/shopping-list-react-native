@@ -4,21 +4,21 @@
 
 import React from "react";
 import Adapter from "enzyme-adapter-react-16";
-import Enzyme, { ReactWrapper, mount } from "enzyme";
+import Enzyme, { mount } from "enzyme";
 import { Header } from "../Header";
-import renderer from 'react-test-renderer';
-
 Enzyme.configure({ adapter: new Adapter() })
 
 describe("Using the Header component", () => {
     let props = {
         title: "Title With a Head"
     };
-    let wrapper = mount(<Header title={props.title}/>);
+
+    let wrapper = mount(<Header title={props.title}/>)
 
     test("it renders correctly", () => {
-        renderer.create(<Header title={props.title}/>)
-    })
+        expect(wrapper).toMatchSnapshot()
+    });
+
     describe("given the title 'Title With a Head'", () => {
         test("then it should render this title", () => {
             let header = wrapper.find("Header");
@@ -39,3 +39,4 @@ describe("Using the Header component", () => {
         })
     });
 });
+
