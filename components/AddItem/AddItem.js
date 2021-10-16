@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/dist/FontAwesome";
 
-const AddItem = ({addItem}) => {
+export const AddItem = ({addItem}) => {
     const [text, setText] = useState("");
 
     const onChange = textValue => {
@@ -44,5 +44,3 @@ const styles = StyleSheet.create({
         marginRight: 3
     }
 });
-
-export default AddItem;
