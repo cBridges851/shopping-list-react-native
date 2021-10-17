@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     addItemButton: {
-        backgroundColor: "#a6cced",
+        backgroundColor: "#A6CCED",
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         padding: 5
     },
     addItemButtonText: {
-        color: "#003b6e",
+        color: "#003B6E",
         fontSize: 20,
         marginRight: 3
     }
