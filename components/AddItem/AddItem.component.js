@@ -11,6 +11,7 @@ export class AddItem extends Component {
             text: ""
         }
     }
+
     onChange(textValue) {
         this.setState({
             text: textValue
@@ -20,15 +21,12 @@ export class AddItem extends Component {
     render() {
         return(
             <View>
-            <TextInputBox onChangeText={this.onChange}></TextInputBox>
-            <CustomButton 
-                iconName="plus"
-                buttonText="Add" 
-                onPressButton={() => this.props.addItem(this.state.text)}/>
-        </View>
-        )
+                <TextInputBox onChangeText={this.onChange}></TextInputBox>
+                <CustomButton 
+                    iconName="plus"
+                    buttonText="Add" 
+                    onPressButton={() => this.props.addItem(this.state.text)}/>
+            </View>
+        );
     }
 };
-
-
-export default AddItem;

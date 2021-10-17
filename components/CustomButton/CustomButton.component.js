@@ -11,7 +11,7 @@ export class CustomButton extends Component {
                 <Icon style={styles.buttonText} name={this.props.iconName}></Icon>
                 <Text style={styles.buttonText}>{this.props.buttonText}</Text>
             </TouchableOpacity>
-        )
+        );
     }
 }
 
