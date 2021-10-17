@@ -1,24 +1,34 @@
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import { View } from "react-native";
 import { CustomButton } from "../CustomButton/CustomButton.component";
 import { TextInputBox } from "../TextInputBox/TextInputBox.component";
 
-const AddItem = ({addItem}) => {
-    const [text, setText] = useState("");
+export class AddItem extends Component {
+    constructor(props) {
+        super(props);
+        this.onChange = this.onChange.bind(this)
+        this.state = {
+            text: ""
+        }
+    }
+    onChange(textValue) {
+        this.setState({
+            text: textValue
+        })
+    }
 
-    const onChange = textValue => {
-        setText(textValue)
-    };
-
-    return (
-        <View>
-            <TextInputBox onChangeText={onChange}></TextInputBox>
+    render() {
+        return(
+            <View>
+            <TextInputBox onChangeText={this.onChange}></TextInputBox>
             <CustomButton 
                 iconName="plus"
                 buttonText="Add" 
-                onPressButton={() => addItem(text)}/>
+                onPressButton={() => this.props.addItem(this.state.text)}/>
         </View>
-    )
-}
+        )
+    }
+};
+
 
 export default AddItem;
