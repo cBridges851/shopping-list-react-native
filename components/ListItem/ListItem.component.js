@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import Icon from "react-native-vector-icons/dist/FontAwesome";
+import { CrossIcon } from "../CrossIcon/CrossIcon.component";
 
 export default class ListItem extends React.Component {
     render() {
@@ -8,12 +8,7 @@ export default class ListItem extends React.Component {
             <TouchableOpacity>
                 <View style={styles.listItemView}>
                     <Text style={styles.shoppingListItem}>{this.props.item.name}</Text>
-                    <Icon
-                        name="remove" 
-                        size={30} 
-                        color={"#FF0000"}
-                        onPress={() => this.props.deleteItem(this.props.item.id)}>
-                    </Icon>
+                    <CrossIcon item={this.props.item} deleteItem={this.props.deleteItem}></CrossIcon>
                 </View>
             </TouchableOpacity>
         )
