@@ -1,8 +1,8 @@
 import React from "react";
 import { Alert, Button, View, Text, Image, StyleSheet, FlatList } from "react-native";
-import Header from "./components/Header/Header";
-import ListItem from "./components/ListItem/ListItem";
-import AddItem from "./components/AddItem/AddItem";
+import Header from "./components/Header/Header.component";
+import ListItem from "./components/ListItem/ListItem.component";
+import AddItem from "./components/AddItem/AddItem.component";
 
 export default class App extends React.Component {
     state = {
