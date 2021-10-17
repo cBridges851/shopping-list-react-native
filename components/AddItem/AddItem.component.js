@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/dist/FontAwesome";
+import { TextInputBox } from "../TextInputBox/TextInputBox.component";
 
 const AddItem = ({addItem}) => {
     const [text, setText] = useState("");
@@ -11,10 +12,10 @@ const AddItem = ({addItem}) => {
 
     return (
         <View>
-            <TextInput 
+            <TextInputBox 
                 style={styles.addItemInput}
                 placeholder="Add item..."
-                onChangeText={onChange}></TextInput>
+                onChangeText={onChange}></TextInputBox>
             <TouchableOpacity 
                 style={styles.addItemButton}
                 onPress={() => addItem(text)}>
@@ -26,10 +27,6 @@ const AddItem = ({addItem}) => {
 }
 
 const styles = StyleSheet.create({
-    addItemInput: {
-        backgroundColor: "#F0F0F0",
-        fontSize: 20
-    },
     addItemButton: {
         backgroundColor: "#A6CCED",
         flexDirection: "row",
