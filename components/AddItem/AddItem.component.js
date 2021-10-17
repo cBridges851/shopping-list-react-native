@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import Icon from "react-native-vector-icons/dist/FontAwesome";
+import { View } from "react-native";
 import { CustomButton } from "../CustomButton/CustomButton.component";
 import { TextInputBox } from "../TextInputBox/TextInputBox.component";
 
