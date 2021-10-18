@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/cbridges851/shopping-list-react-native/badge/refactors)](https://www.codefactor.io/repository/github/cbridges851/shopping-list-react-native/overview/refactors)
+
 # shopping-list-react-native
 A shopping list application I made while following along with the [Traversy Media tutorial](https://www.youtube.com/watch?v=Hf4MJH0jDb4), which I hope to build up on.
 
