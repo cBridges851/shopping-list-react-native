@@ -8,7 +8,7 @@ export class ListItem extends React.Component {
             <TouchableOpacity>
                 <View style={styles.listItemView}>
                     <Text style={styles.shoppingListItem}>{this.props.item.name}</Text>
-                    <CrossIcon item={this.props.item} deleteItem={this.props.deleteItem}></CrossIcon>
+                    <CrossIcon item={this.props.item} deleteItem={this.props.deleteItem} />
                 </View>
             </TouchableOpacity>
         );

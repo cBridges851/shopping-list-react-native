@@ -21,7 +21,7 @@ export class AddItem extends Component {
     render() {
         return(
             <View>
-                <TextInputBox onChangeText={this.onChange}></TextInputBox>
+                <TextInputBox onChangeText={this.onChange} />
                 <CustomButton 
                     iconName="plus"
                     buttonText="Add" 
@@ -29,4 +29,4 @@ export class AddItem extends Component {
             </View>
         );
     }
-};
+}

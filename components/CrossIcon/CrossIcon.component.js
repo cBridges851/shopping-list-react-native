@@ -8,8 +8,8 @@ export class CrossIcon extends Component {
                 name="remove" 
                 size={30} 
                 color={"#FF0000"}
-                onPress={() => this.props.deleteItem(this.props.item.id)}>
-            </Icon>
+                onPress={() => this.props.deleteItem(this.props.item.id)}
+            />
         );
     }
 }
