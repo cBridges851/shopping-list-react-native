@@ -8,7 +8,7 @@ export class CustomButton extends Component {
             <TouchableOpacity 
                 style={styles.button}
                 onPress={this.props.onPressButton}>
-                <Icon style={styles.buttonText} name={this.props.iconName}/>
+                <Icon style={styles.buttonText} name={this.props.iconName} />
                 <Text style={styles.buttonText}>{this.props.buttonText}</Text>
             </TouchableOpacity>
         );
